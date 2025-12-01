@@ -966,7 +966,19 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=200
+                stats.capacity+=670
+                stats.convertRate*=5
+                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,1)
+                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,1)
+                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,1)
+                stats.whitePollen*=1.5
+                stats.redPollen*=1.5
+                stats.bluePollen*=1.5
+                stats.whiteBeeAttack+=10
+                stats.redBeeAttack+=10
+                stats.blueBeeAttack+=10
+                stats.defense+=0.1
+                stats.honeyAtHive*=1.1
             },
             desc:'A small bag.<br><br>+200 capacity',
             cost:['0 honey'],
