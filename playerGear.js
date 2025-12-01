@@ -524,11 +524,16 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.bluePollen*=1.15
-                stats.whitePollen*=1.15
-                stats.redPollen*=1.15
-                stats.defense+=0.1
-
+                stats.bluePollen*=10
+                stats.whitePollen*=10
+                stats.redPollen*=10
+                stats.defense+=1
+                stats.jumpPower*=1.5
+                stats.redBeeAbilityRate*=5
+                stats.blueBeeAbilityRate*=5
+                stats.whiteBeeAbilityRate*=5
+                stats.capacityMultiplier*=100
+                
             },
             desc:'A hard hat that grants bonus pollen and helps prevent head injuries.<br><br>x1.15 pollen<br>+10% defense',
             cost:['30000 honey','1 pineapple'],
