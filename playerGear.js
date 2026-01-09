@@ -524,15 +524,15 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.bluePollen*=10
-                stats.whitePollen*=10
-                stats.redPollen*=10
-                stats.defense+=1
-                stats.jumpPower*=1.5
-                stats.redBeeAbilityRate*=5
-                stats.blueBeeAbilityRate*=5
-                stats.whiteBeeAbilityRate*=5
-                stats.capacityMultiplier*=100
+                stats.bluePollen*=2.5
+                stats.whitePollen*=2.5
+                stats.redPollen*=2.5
+                stats.defense+=0.25
+                stats.jumpPower*=0.5
+                stats.redBeeAbilityRate*=10
+                stats.blueBeeAbilityRate*=10
+                stats.whiteBeeAbilityRate*=10
+                stats.capacityMultiplier*=10
                 
             },
             desc:'A hard hat that grants bonus pollen and helps prevent head injuries.<br><br>x1.15 pollen<br>+10% defense',
@@ -966,11 +966,10 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=670
                 stats.convertRate*=5
-                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,1)
-                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,1)
-                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,1)
+                stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.5)
+                stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.5)
+                stats.instantWhiteConversion=window.applyPercentage(stats.instantWhiteConversion,0.5)
                 stats.whitePollen*=1.5
                 stats.redPollen*=1.5
                 stats.bluePollen*=1.5
