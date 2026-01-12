@@ -21767,7 +21767,7 @@ function BeeSwarmSimulator(DATA){
             },
             ability:function(){
                 
-                if(player.toolUses%10===0){
+                if(player.toolUses%1===0){
                     
                     objects.explosions.push(new ReverseExplosion({col:[1,1,1],pos:[player.body.position.x,player.body.position.y,player.body.position.z],life:0.4,size:5,alpha:2,height:500}))
 
@@ -34760,5 +34760,6 @@ function BeeSwarmSimulator(DATA){
     
 
 }
+
 
 
