@@ -13,9 +13,9 @@ window.playerGear={
         basicSprinkler:{
 
             count:1,
-            diameter:10,
-            power:0.2,
-            rate:4,
+            diameter:30,
+            power:2,
+            rate:5,
             mesh:function(x,y,z,box,cylinder){
 
                 cylinder(x,y,z,0.125,1.25,10,0.3,0.3,0.3,1,90,0,0)
@@ -93,9 +93,9 @@ window.playerGear={
         superSaturator:{
 
             count:1,
-            diameter:15,
-            power:0.5,
-            rate:1,
+            diameter:25,
+            power:0.75,
+            rate:0.75,
             mesh:function(x,y,z,box,cylinder){
 
                 cylinder(x,y+0.25,z,0.15,2.5,10,0.9,0.9,0.5,1,90,0,0)
@@ -528,11 +528,11 @@ window.playerGear={
                 stats.whitePollen*=2.5
                 stats.redPollen*=2.5
                 stats.defense+=0.25
-                stats.jumpPower*=0.5
+                stats.jumpPower*=1
                 stats.redBeeAbilityRate*=10
                 stats.blueBeeAbilityRate*=10
                 stats.whiteBeeAbilityRate*=10
-                stats.capacityMultiplier*=10
+                stats.capacityMultiplier*=5
                 
             },
             desc:'A hard hat that grants bonus pollen and helps prevent head injuries.<br><br>x1.15 pollen<br>+10% defense',
@@ -842,9 +842,12 @@ window.playerGear={
             
             applyStats:function(stats,player){
                 
-                stats.capacity+=5000
-                stats.lootLuck*=1.15
-                stats.convertRate*=1.1
+                stats.capacityMultiplier*=0.01
+                stats.lootLuck*=100
+                stats.convertRate*=2.5
+                stats.honeyFromTokens*=25
+                stats.RedBombPollen*=100
+                stats.beeEnergy*=0.5
             },
             desc:'Attaches to your waist to expand the size of your container.<br><br>+5,000 capacity<br>x1.15 loot luck<br>x1.1 convert rate',
             cost:['14000 honey','1 sunflowerSeed'],
@@ -965,7 +968,8 @@ window.playerGear={
             },
             
             applyStats:function(stats,player){
-                
+
+                stats.capacity+=100
                 stats.convertRate*=5
                 stats.instantRedConversion=window.applyPercentage(stats.instantRedConversion,0.5)
                 stats.instantBlueConversion=window.applyPercentage(stats.instantBlueConversion,0.5)
