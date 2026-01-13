@@ -33370,12 +33370,12 @@ function BeeSwarmSimulator(DATA){
             
             if(i.indexOf('Planter')>-1) continue
 
-            objects.tokens.push(new LootToken(10000,[(ct%9)-2,-1,(-7+((ct/9)|0))],i,100000))
+            objects.tokens.push(new LootToken(5,[(ct%9)-2,-1,(-7+((ct/9)|0))],i,5))
             
             ct++
         }
 
-        objects.tokens.push(new LootToken(10000,[0,1,0],'honey',100000000000000))
+        objects.tokens.push(new LootToken(5,[0,1,0],'honey',1000000000000))
     }
 
     ctx.textAlign='center'
@@ -34760,6 +34760,7 @@ function BeeSwarmSimulator(DATA){
     
 
 }
+
 
 
 
